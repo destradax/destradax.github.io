@@ -1,5 +1,6 @@
 ---
 layout: post
+title: Hotmail and Outlook.com storage space
 ---
 
 # Hotmail and Outlook.com storage space
