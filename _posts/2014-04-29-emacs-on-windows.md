@@ -1,15 +1,27 @@
-Let's asume that the variable **EMACS_HOME** points to your installation
-folder.
+1. Download [Emacs](http://mirror.cedia.org.ec/gnu/emacs/windows/) and extract to C:\emacs
+   You'll end up with something like:
+	   C:
+		|->emacs
+			|->bin
+			|->etc
+			|->info
+			|->leim
+			|->lisp
+			|->site-lisp
 
-1. Set up the **HOME** environment variable. This is where your *.emacs*
-file and *.emacs.d* directory will go.
+2. Set up the **HOME** environment variable. This is where your *.emacs*
+   file and *.emacs.d* directory will go.
 
-2. Emacs' *load-path* variable specifies the load path.
-Check it with `C-h v load-path`.
+3. Create the folder *plugins* inside *.emacs.d*.  
 
-3. Text modes (for example *markdown-mode.el*) go inside EMACS_HOME/lisp/textmodes
+4. Emacs' *load-path* variable specifies the load path.  
+   Check it with `C-h v load-path`.
 
-4. Markdown mode: [download](http://jblevins.org/projects/markdown-mode/)
+5. Add regedit Key [HKEY_CLASSES_ROOT/*/shell/Edit with Emacs/command] with the default value `"C:\emacs\bin\runemacs.exe" %1`
+
+6. Add a shortcut to `C:\emacs\bin\runemacs.exe` called `emacs`, inside `C:\Windows`. Make sure that it says "Start in: `C:\users\destradaa`"
+
+4. [Markdown mode](http://jblevins.org/projects/markdown-mode/). Download [markdown-mode.el](http://jblevins.org/projects/markdown-mode/markdown-mode.el) and put it inside `.emacs.d/plugins/`.
 
 #Comparison between Emacs, Sublime Text 2 and Notepad++#
 
