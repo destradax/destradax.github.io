@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 1. Download [Emacs](http://mirror.cedia.org.ec/gnu/emacs/windows/) and extract to C:\emacs
    You'll end up with something like:
 	   C:
@@ -17,7 +21,7 @@
 4. Emacs' *load-path* variable specifies the load path.  
    Check it with `C-h v load-path`.
 
-5. Add regedit Key [HKEY_CLASSES_ROOT/*/shell/Edit with Emacs/command] with the default value `"C:\emacs\bin\runemacs.exe" %1`
+5. Add regedit Key [HKEY\_CLASSES_ROOT/*/shell/Edit with Emacs/command] with the default value `"C:\emacs\bin\runemacs.exe" %1`
 
 6. Add a shortcut to `C:\emacs\bin\runemacs.exe` called `emacs`, inside `C:\Windows`. Make sure that it says "Start in: `C:\users\destradaa`"
 
