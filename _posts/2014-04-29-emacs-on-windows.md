@@ -4,6 +4,7 @@ layout: post
 
 1. Download [Emacs](http://mirror.cedia.org.ec/gnu/emacs/windows/) and extract to C:\emacs
    You'll end up with something like:
+
 	  	C:
 	  	  |->emacs
 	  		  |->bin
@@ -28,3 +29,11 @@ layout: post
 7. [Markdown mode](http://jblevins.org/projects/markdown-mode/): download [markdown-mode.el](http://jblevins.org/projects/markdown-mode/markdown-mode.el) and put it inside `.emacs.d/plugins/`.
 
 8. [Auto complete mode](http://cx4a.org/software/auto-complete/): download the [zip](http://cx4a.org/pub/auto-complete/auto-complete-1.3.1.zip), extract it and `load-file` the file `etc/install.el`.
+
+9. Paste this in the scratchpad and do `eval-buffer`:
+
+		(package-install helm)
+		(package-install js2-mode)
+		(package-install rainbow-mode)
+		(package-install yasnippet)
+		
