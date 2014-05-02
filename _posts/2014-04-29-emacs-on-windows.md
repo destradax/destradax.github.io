@@ -32,7 +32,8 @@ layout: post
 
 9. If you are behind a proxy, put this in your *.emacs* file:
 
-		(setq url-proxy-services '(("no_proxy" . "localhost") ("http" . "proxy.work.com:8080")))
+		(setq url-proxy-services '(("no_proxy" . "localhost")
+			                       ("http" . "proxy.work.com:8080")))
 
 10. Paste this in the scratchpad and do `eval-buffer`:
 
