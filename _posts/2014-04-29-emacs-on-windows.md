@@ -30,10 +30,15 @@ layout: post
 
 8. [Auto complete mode](http://cx4a.org/software/auto-complete/): download the [zip](http://cx4a.org/pub/auto-complete/auto-complete-1.3.1.zip), extract it and `load-file` the file `etc/install.el`.
 
-9. Paste this in the scratchpad and do `eval-buffer`:
+9. If you are behind a proxy, put this in your *.emacs* file:
 
-		(package-install helm)
-		(package-install js2-mode)
-		(package-install rainbow-mode)
-		(package-install yasnippet)
+	(setq url-proxy-services '(("no_proxy" . "localhost")
+                           ("http" . "proxy.work.com:8080")))
+
+10. Paste this in the scratchpad and do `eval-buffer`:
+
+		(package-install 'helm)
+		(package-install 'js2-mode)
+		(package-install 'rainbow-mode)
+		(package-install 'yasnippet)
 		
