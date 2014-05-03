@@ -26,7 +26,7 @@ layout: post
 
 6. Add a shortcut to `C:\emacs\bin\runemacs.exe` called `emacs`, inside `C:\Windows`. Make sure that it says "Start in: `C:\users\destradaa`"
 
-7. [Markdown mode](http://jblevins.org/projects/markdown-mode/): download [markdown-mode.el](http://jblevins.org/projects/markdown-mode/markdown-mode.el) and put it inside `.emacs.d/plugins/`.
+7. [Markdown mode](http://jblevins.org/projects/markdown-mode/): download [markdown-mode.el](http://jblevins.org/projects/markdown-mode/markdown-mode.el) and put it inside `~/.emacs.d/packages/`.
 
 8. [Auto complete mode](http://cx4a.org/software/auto-complete/): download the [zip](http://cx4a.org/pub/auto-complete/auto-complete-1.3.1.zip), extract it and `load-file` the file `etc/install.el`.
 
