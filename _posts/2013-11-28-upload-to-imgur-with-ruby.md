@@ -17,11 +17,11 @@ layout: post
 3. You will get an email with your **client_id** and your **client_secret**.
 4. If you intend to upload anonymously, you only need to use your client_id.
 5. Make a POST request to <https://api.imgur.com/3/upload.json> with the following properties:
-	1. A header called `Authorization` with the value `Client-ID client_id`.
+	1. A header called `Authorization` with the value `Client-ID <client_id>`.
 	2. A parameter called `image` with the image data encoded in Base64.
 
 
-Example in ruby (replace `client_id` with your client_id ):
+Example in ruby (replace `<client_id>` with your client_id ):
 
 {% highlight ruby %}
 #!/usr/bin/ruby
@@ -44,7 +44,7 @@ https = Net::HTTP.new(uri.host, uri.port)
 https.use_ssl = true
 
 request = Net::HTTP::Post.new(uri.path)
-request["Authorization"] = "Client-ID client_id"
+request["Authorization"] = "Client-ID <client_id>"
 request.set_form_data(params)
 
 response = https.request(request)
@@ -52,6 +52,6 @@ response = https.request(request)
 hash = JSON.parse(response.body)
 link = hash["data"]["link"]
 
-pust hash
+puts hash
 puts link
 {% endhighlight %}
