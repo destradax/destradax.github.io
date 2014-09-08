@@ -104,7 +104,7 @@ and you can run it with:
 Maven uses the file *pom.xml* to keep your project configuration and other stuff. It also helps you manage dependencies. No more downloading xxxxx.jar files from many different sites and manually puting them in your project.
 you can specify a required library in your *pom.xlm*, by telling maven the groupId, artifactId and version:
 
-{% highlight xml %}
+``` xml
 		<dependencies>
 			<dependency>
 				<groupId>junit</groupId>
@@ -118,8 +118,8 @@ you can specify a required library in your *pom.xlm*, by telling maven the group
 				<version>4.2.7.Final</version>
 			</dependency>
 		</dependencies>
-{% endhighlight %}
 
+```
 This tells maven to download the required jar files for Junit version 3.8.1 and Hibernate Annotations version 4.2.7.Final and include them in my projects.
 
 ## Eclipse integration
