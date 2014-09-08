@@ -2,7 +2,7 @@
 layout: post
 ---
 
-# Uploading an image to imgur.com using ruby 
+# Uploading an image to imgur.com using ruby
 
 1. Go to <http://www.imgur.com> and create an account.
 2. Go to <https://api.imgur.com/oauth2/addclient>
@@ -12,8 +12,8 @@ layout: post
 	4. Give a description for the app.
 	5. Fill in the captcha.
 	6. Click _Submit_.  
-![register 1]({{site.url}}/images/2013-11-28-1.png)
-![register 2]({{site.url}}/images/2013-11-28-2.png)
+![register 1](/images/2013-11-28-1.png)
+![register 2](/images/2013-11-28-2.png)
 3. You will get an email with your **client_id** and your **client_secret**.
 4. If you intend to upload anonymously, you only need to use your client_id.
 5. Make a POST request to <https://api.imgur.com/3/upload.json> with the following properties:

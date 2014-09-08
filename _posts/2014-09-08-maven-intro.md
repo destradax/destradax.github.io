@@ -127,7 +127,7 @@ This tells maven to download the required jar files for Junit version 3.8.1 and 
 	**Note:** You do not need to run the command `mvn eclipse:eclipse`  
 	![Eclipse Import](/images/2014-09-08-01.png)
 2. Select the root directory of your Maven project:  
-	![Root Directory]({{site.url}}/images/2014-09-08-02.png)
+	![Root Directory](/images/2014-09-08-02.png)
 3. Hit *Finish*.
 
 ## Maven archetype:generate
