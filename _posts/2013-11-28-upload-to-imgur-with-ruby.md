@@ -23,7 +23,7 @@ layout: post
 
 Example in ruby (replace `<client_id>` with your client_id ):
 
-{% highlight ruby %}
+``` ruby
 #!/usr/bin/ruby
 
 require 'net/http'
@@ -54,4 +54,4 @@ link = hash["data"]["link"]
 
 puts hash
 puts link
-{% endhighlight %}
+```

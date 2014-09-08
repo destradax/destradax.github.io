@@ -7,13 +7,15 @@ layout: post
 ## What is Maven?
 Not very long ago, when you had to compile your single-file project you only had to:
 
+``` bash
 		gcc hello.c -o hello
 		./hello
-
-That was easy, but when you had to compile a big project that included lots of libraries and lots of source files under different directories, it could become quite a headache.  
+```
+That was easy, but when you had to compile a big project that included lots of libraries and lots of source files under different directories, it could become quite a headache.
 So the all-shiny Make came into existence, to keep track of all those source files, under their respective directory and give you an easy way to recompile outdated source files and generate your program. It used a text file, commonly named *makefile*, to specify all your project's stuff. Example makefile:
 
-		all: hello  
+``` make
+		all: hello
 
 		hello: main.o factorial.o hello.o
 			g++ main.o factorial.o hello.o -o hello
@@ -29,7 +31,7 @@ So the all-shiny Make came into existence, to keep track of all those source fil
 
 		clean:
 			rm -rf *o hello
-
+```
 you just had to run:
 
 		make
@@ -81,18 +83,18 @@ This will create the following structure for your project:
 		my-app
 		|-- pom.xml
 		`-- src
-		    |-- main
-		    |   `-- java
-		    |       `-- com
-		    |           `-- mycompany
-		    |               `-- app
-		    |                   `-- App.java
-		    `-- test
-		        `-- java
-		            `-- com
-		                `-- mycompany
-		                    `-- app
-		                        `-- AppTest.java
+				|-- main
+				|	 `-- java
+				|			 `-- com
+				|					 `-- mycompany
+				|							 `-- app
+				|									 `-- App.java
+				`-- test
+						`-- java
+								`-- com
+										`-- mycompany
+												`-- app
+														`-- AppTest.java
 
 and you can run it with:
 
@@ -105,28 +107,27 @@ Maven uses the file *pom.xml* to keep your project configuration and other stuff
 you can specify a required library in your *pom.xlm*, by telling maven the groupId, artifactId and version:
 
 ``` xml
-		<dependencies>
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>3.8.1</version>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-entitymanager</artifactId>
-				<version>4.2.7.Final</version>
-			</dependency>
-		</dependencies>
-
+<dependencies>
+	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>3.8.1</version>
+		<scope>test</scope>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-entitymanager</artifactId>
+		<version>4.2.7.Final</version>
+	</dependency>
+</dependencies>
 ```
 This tells maven to download the required jar files for Junit version 3.8.1 and Hibernate Annotations version 4.2.7.Final and include them in my projects.
 
 ## Eclipse integration
-1. Go to *File* --> *Import* and select *Existing Maven Projects*:  
-	**Note:** You do not need to run the command `mvn eclipse:eclipse`  
+1. Go to *File* --> *Import* and select *Existing Maven Projects*:
+	**Note:** You do not need to run the command `mvn eclipse:eclipse`
 	![Eclipse Import](/images/2014-09-08-01.png)
-2. Select the root directory of your Maven project:  
+2. Select the root directory of your Maven project:
 	![Root Directory](/images/2014-09-08-02.png)
 3. Hit *Finish*.
 

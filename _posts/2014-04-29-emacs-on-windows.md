@@ -3,24 +3,24 @@ layout: post
 ---
 
 1. Download [Emacs](http://mirror.cedia.org.ec/gnu/emacs/windows/) and extract to C:\emacs
-   You'll end up with something like:
+	 You'll end up with something like:
 
-	  	C:
-	  	  |->emacs
-	  		  |->bin
-	  		  |->etc
-	  		  |->info
-	  		  |->leim
-	  		  |->lisp
-	  		  |->site-lisp
+		C:
+			|->emacs
+				|->bin
+				|->etc
+				|->info
+				|->leim
+				|->lisp
+				|->site-lisp
 
 2. Set up the **HOME** environment variable. This is where your *.emacs*
-   file and *.emacs.d* directory will go.
+	 file and *.emacs.d* directory will go.
 
-3. Create the folder *packages* inside *.emacs.d*.  
+3. Create the folder *packages* inside *.emacs.d*.
 
-4. Emacs' *load-path* variable specifies the load path.  
-   Check it with `C-h v load-path`.
+4. Emacs' *load-path* variable specifies the load path.
+	 Check it with `C-h v load-path`.
 
 5. Add regedit Key [HKEY\_CLASSES_ROOT/*/shell/Edit with Emacs/command] with the default value `"C:\emacs\bin\runemacs.exe" %1`
 
@@ -33,7 +33,7 @@ layout: post
 9. If you are behind a proxy, put this in your *.emacs* file:
 
 		(setq url-proxy-services '(("no_proxy" . "localhost")
-			                       ("http" . "proxy.work.com:8080")))
+														 ("http" . "proxy.work.com:8080")))
 
 10. Paste this in the scratchpad and do `eval-buffer`:
 
@@ -41,4 +41,3 @@ layout: post
 		(package-install 'js2-mode)
 		(package-install 'rainbow-mode)
 		(package-install 'yasnippet)
-		
