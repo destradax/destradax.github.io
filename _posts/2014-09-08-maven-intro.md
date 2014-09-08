@@ -8,29 +8,29 @@ layout: post
 Not very long ago, when you had to compile your single-file project you only had to:
 
 ``` bash
-		gcc hello.c -o hello
-		./hello
+gcc hello.c -o hello
+./hello
 ```
 That was easy, but when you had to compile a big project that included lots of libraries and lots of source files under different directories, it could become quite a headache.
 So the all-shiny Make came into existence, to keep track of all those source files, under their respective directory and give you an easy way to recompile outdated source files and generate your program. It used a text file, commonly named *makefile*, to specify all your project's stuff. Example makefile:
 
 ``` make
-		all: hello
+all: hello
 
-		hello: main.o factorial.o hello.o
-			g++ main.o factorial.o hello.o -o hello
+hello: main.o factorial.o hello.o
+	g++ main.o factorial.o hello.o -o hello
 
-		main.o: main.cpp
-			g++ -c main.cpp
+main.o: main.cpp
+	g++ -c main.cpp
 
-		factorial.o: factorial.cpp
-			g++ -c factorial.cpp
+factorial.o: factorial.cpp
+	g++ -c factorial.cpp
 
-		hello.o: hello.cpp
-			g++ -c hello.cpp
+hello.o: hello.cpp
+	g++ -c hello.cpp
 
-		clean:
-			rm -rf *o hello
+clean:
+	rm -rf *o hello
 ```
 you just had to run:
 
